@@ -6,4 +6,6 @@ public interface HomeService {
 
 	void saveData(Student s);
 
+	Iterable<Student> getAllData();
+
 }

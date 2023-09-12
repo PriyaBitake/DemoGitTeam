@@ -1,6 +1,7 @@
 package com.example.demo.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,12 @@ public class HomeController {
 		
 		hs.saveData(s);
 		return "Data Save Zala Re ba ";
+	}
+	
+	@GetMapping("/getAll")
+	public Iterable<Student> getAllData()
+	{
+		return hs.getAllData();
 	}
 	
 }

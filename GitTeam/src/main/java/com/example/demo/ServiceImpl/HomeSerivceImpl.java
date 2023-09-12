@@ -20,4 +20,10 @@ public class HomeSerivceImpl implements HomeService {
 		hr.save(s);
 		
 	}
+
+	@Override
+	public Iterable<Student> getAllData() {
+		
+		return hr.findAll();
+	}
 }
