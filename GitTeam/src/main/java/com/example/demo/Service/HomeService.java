@@ -8,4 +8,6 @@ public interface HomeService {
 
 	Iterable<Student> getAllData();
 
+	public void delete(int id);
+
 }
