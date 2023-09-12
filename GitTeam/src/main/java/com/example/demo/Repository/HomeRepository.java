@@ -7,5 +7,7 @@ import com.example.demo.Model.Student;
 
 @Repository
 public interface HomeRepository extends JpaRepository<Student, Integer> {
+	
+	public Student findById(int id);
 
 }

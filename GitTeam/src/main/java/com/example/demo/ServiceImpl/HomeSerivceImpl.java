@@ -1,5 +1,7 @@
 package com.example.demo.ServiceImpl;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,5 +33,14 @@ public class HomeSerivceImpl implements HomeService {
 	public void delete(int id) {
 	hr.deleteById(id);
 		
+	}
+
+	@Override
+	public Student getSingleData(int id) {
+
+		
+	Student findById = hr.findById(id);
+		
+		return findById;
 	}
 }

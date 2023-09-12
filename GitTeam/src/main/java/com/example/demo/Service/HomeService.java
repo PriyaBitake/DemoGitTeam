@@ -10,4 +10,6 @@ public interface HomeService {
 
 	public void delete(int id);
 
+	Student getSingleData(int id);
+
 }

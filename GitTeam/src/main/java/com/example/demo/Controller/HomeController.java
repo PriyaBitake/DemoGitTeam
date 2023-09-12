@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,4 +37,22 @@ public class HomeController {
 		hs.delete(id);
 		return" data is deleted";
 	}
+	
+	@GetMapping("/getSingleData/{id}")
+	public Student getSingleData(@PathVariable int id)
+	{
+		
+		Student s=hs.getSingleData(id);
+		
+		return s;
+		
+	}
+	
+	@PutMapping("/updateData")
+	public String updateData(@RequestBody Student s)
+	{
+		hs.saveData(s);
+		return "Data Updated ";
+	}
+	
 }
